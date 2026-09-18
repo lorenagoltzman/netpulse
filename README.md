@@ -4,6 +4,12 @@ Monitor leve de disponibilidade e latência para pequenos ambientes de rede. O p
 
 > Projeto de portfólio desenvolvido para praticar automação, fundamentos de redes, observabilidade e tratamento de incidentes.
 
+## Demonstração
+
+**[Abrir painel publicado](https://lorenagoltzman.github.io/netpulse/)**
+
+O painel usa dados fictícios gerados pelo modo de demonstração. Ele não executa verificações reais contra serviços externos.
+
 ## O que o projeto demonstra
 
 - Verificação de conectividade TCP em portas configuráveis
@@ -12,10 +18,6 @@ Monitor leve de disponibilidade e latência para pequenos ambientes de rede. O p
 - Geração de relatório HTML sem dependências externas
 - Modo de demonstração para testar o fluxo sem depender de uma rede específica
 - Testes automatizados para as regras de classificação e agregação
-
-## Demonstração
-
-O diretório `docs` contém um painel gerado com dados fictícios. Ele pode ser publicado no GitHub Pages sem executar verificações reais contra serviços externos.
 
 ## Arquitetura
 
