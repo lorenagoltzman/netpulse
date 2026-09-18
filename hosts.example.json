@@ -1,0 +1,5 @@
+[
+  {"name": "Portal local", "host": "127.0.0.1", "port": 8000, "timeout": 1.0},
+  {"name": "DNS Cloudflare", "host": "1.1.1.1", "port": 53, "timeout": 1.5},
+  {"name": "Site de exemplo", "host": "example.com", "port": 443, "timeout": 2.0}
+]

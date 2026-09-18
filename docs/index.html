@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetPulse Dashboard</title>
+  <style>
+    :root { --bg:#07111f; --panel:#101d2e; --line:#24364d; --text:#eaf2ff; --muted:#90a4bf; --cyan:#38bdf8; --green:#34d399; --yellow:#fbbf24; --red:#fb7185; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,Segoe UI,sans-serif; background:radial-gradient(circle at top right,#12304d 0,var(--bg) 38%); color:var(--text); min-height:100vh; }
+    main { width:min(1100px,92%); margin:0 auto; padding:54px 0; }
+    header { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:28px; }
+    h1 { margin:0; font-size:clamp(2rem,5vw,3.3rem); letter-spacing:-.05em; }
+    header p, td span { color:var(--muted); }
+    .accent { color:var(--cyan); }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:24px; }
+    .card,.table-wrap { background:rgba(16,29,46,.88); border:1px solid var(--line); border-radius:18px; box-shadow:0 18px 55px rgba(0,0,0,.2); }
+    .card { padding:22px; } .label { color:var(--muted); font-size:.8rem; text-transform:uppercase; letter-spacing:.12em; }
+    .value { display:block; margin-top:8px; font-size:2rem; font-weight:750; }
+    .table-wrap { overflow:auto; } table { width:100%; border-collapse:collapse; }
+    th,td { padding:18px 20px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap; } th { color:var(--muted); font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; }
+    td:first-child span { display:block; margin-top:4px; font-size:.82rem; } tr:last-child td { border-bottom:0; }
+    .status { display:inline-block; padding:6px 10px; border-radius:999px; font-size:.75rem; font-weight:800; }
+    .online { color:var(--green); background:#34d39918; } .atencao { color:var(--yellow); background:#fbbf2418; } .critico,.offline { color:var(--red); background:#fb718518; }
+    footer { color:var(--muted); margin-top:18px; font-size:.82rem; }
+    @media (max-width:720px) { header { align-items:start; flex-direction:column; } .cards { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <header><div><div class="label">Monitoramento de rede</div><h1>Net<span class="accent">Pulse</span></h1></div><p>Visao consolidada dos endpoints configurados</p></header>
+  <section class="cards">
+    <article class="card"><span class="label">Endpoints disponiveis</span><span class="value">100.0%</span></article>
+    <article class="card"><span class="label">Latencia media</span><span class="value">89.3 ms</span></article>
+    <article class="card"><span class="label">Incidentes registrados</span><span class="value">0</span></article>
+  </section>
+  <section class="table-wrap"><table><thead><tr><th>Servico</th><th>Status</th><th>Disponibilidade</th><th>Latencia media</th><th>Amostras</th></tr></thead><tbody>
+        <tr>
+          <td><strong>Portal local</strong><span>127.0.0.1:8000</span></td>
+          <td><span class="status online">ONLINE</span></td>
+          <td>100.0%</td>
+          <td>34.0 ms</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><strong>DNS Cloudflare</strong><span>1.1.1.1:53</span></td>
+          <td><span class="status online">ONLINE</span></td>
+          <td>100.0%</td>
+          <td>86.0 ms</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><strong>Site de exemplo</strong><span>example.com:443</span></td>
+          <td><span class="status atencao">ATENCAO</span></td>
+          <td>100.0%</td>
+          <td>148.0 ms</td>
+          <td>1</td>
+        </tr></tbody></table></section>
+  <footer>Gerado pelo NetPulse. Horarios registrados em UTC.</footer>
+</main>
+</body>
+</html>
